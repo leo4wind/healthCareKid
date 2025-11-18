@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <title>健康小站 · 首页</title>
+  <meta name="description" content="健康小站首页，链接到各个专题页面。" />
+  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #1f2328;
+      --muted: #6e7781;
+      --link: #0969da;
+      --card: #f6f8fa;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0d1117;
+        --fg: #e6edf3;
+        --muted: #8b949e;
+        --link: #58a6ff;
+        --card: #161b22;
+      }
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      display: grid;
+      place-items: center;
+    }
+
+    .wrap {
+      width: min(920px, 92vw);
+      padding: 6vh 4vw;
+    }
+
+    header h1 {
+      margin: 0 0 0.25rem;
+      font-size: clamp(1.6rem, 2.6vw + 1rem, 2.4rem);
+      letter-spacing: -0.02em;
+    }
+
+    header p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin: 28px 0 8px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid color-mix(in oklab, var(--fg) 12%, transparent);
+      border-radius: 12px;
+      padding: 16px 16px 14px;
+      transition: transform 120ms ease, background 120ms ease, border-color 120ms ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+    }
+
+    .card a {
+      color: inherit;
+      text-decoration: none;
+      display: block;
+    }
+
+    .card h2 {
+      margin: 0 0 6px;
+      font-size: 1.05rem;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    footer {
+      margin-top: 20px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .note {
+      margin-top: 8px;
+    }
+
+    .note a {
+      color: var(--link);
+    }
+  </style>
+</head>
+
+<body>
+  <main class="wrap">
+    <header>
+      <h1>健康小站</h1>
+      <p>选择一个页面开始浏览：</p>
+    </header>
+
+    <ul class="cards">
+      <li class="card">
+        <a href="influenza-chatgpt.html">
+          <h2>流感问答（ChatGPT）</h2>
+          <p>围绕流感的常见问题与解答。</p>
+        </a>
+      </li>
+      <li class="card">
+        <a href="influenza-grok-why-so-many.html">
+          <h2>流感：为什么开这么多药（Grok）</h2>
+          <p>从数据与现象角度解读传播高峰。</p>
+        </a>
+      </li>
+      <li class="card">
+        <a href="influenza-grok.html">
+          <h2>流感问答（Grok）</h2>
+          <p>另一种视角的问答整理与科普。</p>
+        </a>
+      </li>
+    </ul>
+
+    <footer>
+      <div>托管于 GitHub Pages</div>
+      <div class="note">如需新增页面，在本仓库添加新的 <code>.html</code> 文件，并在本页增加相应链接。</div>
+    </footer>
+  </main>
+</body>
+
+</html>
